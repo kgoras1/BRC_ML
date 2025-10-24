@@ -29,7 +29,7 @@ Configuration:
     - OUTPUT_DIR: Directory to save extracted features
     - BATCH_SIZE: Number of tiles to process simultaneously
 
-Author: [Your Name]
+Author: Konstantinos Papagoras
 Date: 2025
 """
 

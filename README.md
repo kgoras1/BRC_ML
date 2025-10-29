@@ -2,7 +2,7 @@
 
 This repository contains the code and experimental pipeline for our study on **annotation-free and weakly supervised classification of breast cancer molecular subtypes (LumA, LumB, Basal, HER2) from histopathology whole slide images (WSI)**. 
 
-The workflow integrates **Preprocessing and Tiling** **Feature Extraction using the UNI-2 Foundation Model**, **Dataset Splitting and Mean Pooling**, and **One vs Rest Model training and evaluation** for reproducible benchmarking across multiple data sources (TCGA-BRCA, CPTAC-BRCA, and Warwick HER2).
+The workflow integrates **Preprocessing and Tiling**, **Feature Extraction using the UNI-2 Foundation Model**, **Dataset Splitting and Mean Pooling**, and **One vs Rest Model training and evaluation** for reproducible benchmarking across multiple data sources (TCGA-BRCA, CPTAC-BRCA, and Warwick HER2).
 
 ---
 

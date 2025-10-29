@@ -36,6 +36,7 @@ Our end-to-end pipeline consists of four main stages:
 ---
 
 ## ⚙️ Repository Structure
+
 src/
 ├── preprocessing/                         # WSI preprocessing and tiling
 │   ├── tile_filtering.py                  # Removes background, white, and blurry tiles based on pixel intensity and variance

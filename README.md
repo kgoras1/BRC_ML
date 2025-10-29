@@ -1,7 +1,8 @@
 # Breast Cancer Molecular Subtyping from Whole Slide Images using UNI-2 Features
 
-This repository contains the code and experimental pipeline for our study on **annotation-free and weakly supervised classification of breast cancer molecular subtypes (LumA, LumB, Basal, HER2) from histopathology whole slide images (WSI)**.  
-The workflow integrates ****data_preprocessing** **foundation model feature extraction**, **multiple instance learning (MIL)**, and **classical machine learning** for reproducible benchmarking across multiple data sources (TCGA-BRCA, CPTAC-BRCA, and Warwick HER2).
+This repository contains the code and experimental pipeline for our study on **annotation-free and weakly supervised classification of breast cancer molecular subtypes (LumA, LumB, Basal, HER2) from histopathology whole slide images (WSI)**. 
+
+The workflow integrates ****Preprocessing and Tiling** **Feature Extraction using the UNI-2 Foundation Model**, **Dataset Splitting and Mean Pooling**, and **One vs Rest Model training and evaluation** for reproducible benchmarking across multiple data sources (TCGA-BRCA, CPTAC-BRCA, and Warwick HER2).
 
 ---
 
@@ -33,7 +34,7 @@ Our end-to-end pipeline for weakly supervised breast cancer molecular subtyping 
    Linear Discriminant Analysis (LDA) was applied to visualize subtype separability in feature space.
 
    
-7. **One vs Rest Model training and evaluation**
+6. **One vs Rest Model training and evaluation**
    
    Each molecular subtype was modeled independently using an OvR setup, where one binary classifier distinguishes each subtype from all others.
 

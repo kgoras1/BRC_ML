@@ -7,19 +7,25 @@ The workflow integrates ****data_preprocessing** **foundation model feature extr
 
 ## 🧩 Overview
 
-Our end-to-end pipeline consists of four main stages:
+OOur end-to-end pipeline for weakly supervised breast cancer molecular subtyping consists of four main stages:
 
-1. **Dataset assembly and patient-level splitting**  
-   Stratified 80/20 train-test partitioning by subtype and source (TCGA, CPTAC, Warwick), with fixed seeds for reproducibility.
+1. **Preprocessing and Tiling**  
+   Whole Slide Images (WSIs) are preprocessed to detect tissue regions and tiled at 20× magnification into 224×224 patches without overlap.  
+   Background, white, and blurry tiles are filtered out using simple image-statistics thresholds.  
+   Tiles are renamed and organized to preserve Slide_ID, coordinates, data source, and molecular subtype labels.
 
-2. **Preprocessing and tiling**  
-   Tissue detection and tiling at 20× magnification into 224×224 patches with no overlap, excluding background and blurry tiles, using simple image-statistics filters.
+2. **Feature Extraction using the UNI-2 Foundation Model**  
+   Each tile is passed through the **UNI-2** ViT-H/14 encoder (trained via DINOv2 self-supervision), producing a **1536-dimensional embedding** per tile.  
+   Per-slide dictionaries are created, where each Slide_ID maps to its corresponding set of tile embeddings.
 
-3. **Feature extraction using the UNI-2 foundation model**  
-   Tile embeddings (1536-D) were extracted using the UNI-2 ViT-H/14 encoder trained via the DINOv2 self-supervised framework.
-   Slide-level representations were obtained by mean pooling tile embeddings or aggregating through attention-based MIL.
+3. **Dataset Splitting and Mean Pooling**  
+   Patient-level splits were created with an **80/20 train-test** ratio, followed by an **8/1/1** subdivision of the training set into train, validation, and      calibration subsets for cross-validation and probability calibration where applicable.  
+   To prevent data leakage, all tiles from a single patient were assigned to the same split, with stratification by molecular subtype and data source.  
+   Mean-pooling of tile embeddings produced a single 1536-dimensional slide vector for classical ML models.  
+   Linear Discriminant Analysis (LDA) was applied to visualize subtype separability in feature space.
 
-4. **One vs Rest Model training and evaluation**  
+   
+5. **One vs Rest Model training and evaluation**  
    Each molecular subtype was modeled independently using an OvR setup, where one binary classifier distinguishes each subtype from all others.
 
    Cosine similarity baseline: non-parametric k-NN on mean-pooled slide vectors.

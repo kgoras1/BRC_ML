@@ -28,7 +28,7 @@ Our end-to-end pipeline consists of four main stages:
 
    Attention-based Deep MIL using tile-level embeddings and attention pooling.
 
-  Tile-level Logistic Regression MIL for interpretable, per-tile predictions.
+   Tile-level Logistic Regression MIL for interpretable, per-tile predictions.
   
   Optional components include class balancing (oversampling, downsampling, SMOTE) and probability calibration (isotonic or temperature scaling).
   Evaluation metrics include accuracy, balanced accuracy, macro F1, weighted F1, ROC-AUC, precision and recall computed per class, with macro-averaged scores reported as overall performance summaries across all subtypes.

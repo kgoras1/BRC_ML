@@ -37,34 +37,36 @@ Our end-to-end pipeline consists of four main stages:
 
 ## ⚙️ Repository Structure
 
+```
 src/
-├── preprocessing/ # WSI preprocessing and tiling
-│ ├── tile_filtering.py # Removes background, white, and blurry tiles based on pixel intensity and variance
-│ └── tile_rename.py # Renames and organizes tiles while retaining coordinates and magnification, Slide_ID, data source, and molecular subtype label
+├── preprocessing/                         # WSI preprocessing and tiling
+│   ├── tile_filtering.py                  # Removes background, white, and blurry tiles based on pixel intensity and variance
+│   └── tile_rename.py                     # Renames and organizes tiles while retaining coordinates and magnification, Slide_ID, data source, and molecular subtype label
 
-├── feature_extraction/ # Tile-level feature extraction with UNI-2
-│ ├── UNI2_fextraction.py # Extracts 1536-D embeddings from the UNI-2 encoder (ViT-H/14, DINOv2)
-│ └── Create_Tile_Features_dicts.py # Builds per-slide dictionaries of extracted features;
-│ # each Slide_ID is a key containing tiles as subkeys and their 1536-D feature vectors as values
+├── feature_extraction/                    # Tile-level feature extraction with UNI-2
+│   ├── UNI2_fextraction.py                # Extracts 1536-D embeddings from the UNI-2 encoder (ViT-H/14, DINOv2)
+│   └── Create_Tile_Features_dicts.py      # Builds per-slide dictionaries of extracted features;
+│                                          # each Slide_ID is a key containing tiles as subkeys and their 1536-D feature vectors as values
 
-├── mean_pooling_features/ # Slide-level (mean-pooled) feature ML training and analysis
-│ ├── Create_MeanPooling_vectors.py # Generates mean-pooled 1536-D slide representations from tile embeddings
-│ ├── LDA_analysis_mean_vectors.py # Performs Linear Discriminant Analysis (LDA) for feature-space visualization
-│ └── ML_mean_features/ # Classical ML models on pooled slide features
-│ ├── Logistic_models.py # One-vs-Rest (OvR) logistic regression with/without calibration and class balancing
-│ ├── data_preperation/ # Train/validation/calibration split creation
-│ │ └── data_preperation.py # Generates 80/20 train-test split and 8/1/1 train-eval-calib subsets and CV splits
-│ # tracks all Slide_IDs to prevent data leakage
-│ └── Cosine_Similarity.py # k-NN (cosine similarity) baseline on mean-pooled vectors
+├── mean_pooling_features/                 # Slide-level (mean-pooled) feature ML training and analysis
+│   ├── Create_MeanPooling_vectors.py      # Generates mean-pooled 1536-D slide representations from tile embeddings
+│   ├── LDA_analysis_mean_vectors.py       # Performs Linear Discriminant Analysis (LDA) for feature-space visualization
+│   └── ML_mean_features/                  # Classical ML models on pooled slide features
+│       ├── Logistic_models.py             # One-vs-Rest (OvR) logistic regression with/without calibration and class balancing
+│       ├── data_preperation/              # Train/validation/calibration split creation
+│       │   └── data_preperation.py        # Generates 80/20 train-test split and 8/1/1 train-eval-calib subsets and CV splits
+│                                          # Tracks all Slide_IDs to prevent data leakage
+│       └── Cosine_Similarity.py           # k-NN (cosine similarity) baseline on mean-pooled vectors
 
-├── MIL/ # Multiple Instance Learning (MIL) approaches
-│ ├── MIL_training/ # Attention-based deep MIL and tile-level MIL training
-│ │ ├── AttentionMIL_Callibration_Balance_training.py # Attention-based MIL with class balancing and temperature calibration
-│ │ └── LR_MIL.py # Tile-level logistic regression MIL
-│ ├── MIL_evaluate/ # MIL model evaluation and calibration
-│ │ └── AttentionMIL_evaluate.py # Evaluates MIL models and applies temperature scaling
-│ └── Heatmaps/ # Visualization of spatial attention and probability maps
-│ └── HeatmapV2.py # Generates subtype-specific heatmaps highlighting informative tissue regions
+├── MIL/                                   # Multiple Instance Learning (MIL) approaches
+│   ├── MIL_training/                      # Attention-based deep MIL and tile-level MIL training
+│   │   ├── AttentionMIL_Callibration_Balance_training.py  # Attention-based MIL with class balancing and temperature calibration
+│   │   └── LR_MIL.py                      # Tile-level logistic regression MIL
+│   ├── MIL_evaluate/                      # MIL model evaluation and calibration
+│   │   └── AttentionMIL_evaluate.py       # Evaluates MIL models and applies temperature scaling
+│   └── Heatmaps/                          # Visualization of spatial attention and probability maps
+│       └── HeatmapV2.py                   # Generates subtype-specific heatmaps highlighting informative tissue regions
+```
 
 
 

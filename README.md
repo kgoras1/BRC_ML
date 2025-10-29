@@ -91,9 +91,9 @@ src/
 
 Access to TCGA-BRCA, CPTAC-BRCA, and Warwick HER2 datasets requires appropriate data use permissions
 
-Some file paths, slide identifiers, and hyperparameters are dataset-specific and will need modification.
+The scripts are designed to run on a local filesystem; paths and hyperparameters may need editing for other environments.
 
-Each script includes docstrings describing its purpose, parameters, and expected inputs/outputs — users are encouraged to review these for guidance on customization.
+Users can consult docstrings in each script for detailed parameter explanations.”
 
 Due to dataset size, logistic regression at tile level was not retrained for calibration because of limited performance and higher computational cost compared to GPU-trained MIL models.
 

@@ -1,4 +1,4 @@
-# Breast Cancer Molecular Subtyping from Whole Slide Images using UNI-2 Features
+# Breast Cancer Molecular Subtyping from Whole Slide Images using Computational Pathology Foundation Model
 
 This repository contains the code and experimental pipeline for our study on **annotation-free and weakly supervised classification of breast cancer molecular subtypes (LumA, LumB, Basal, HER2) from histopathology whole slide images (WSI)**. 
 

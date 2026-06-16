@@ -55,33 +55,53 @@ Our end-to-end pipeline for weakly supervised breast cancer molecular subtyping 
 
 ```
 src/
-├── preprocessing/                         # WSI preprocessing and tiling
-│   ├── tile_filtering.py                  # Removes background, white, and blurry tiles based on pixel intensity and variance
-│   └── tile_rename.py                     # Renames and organizes tiles while retaining coordinates and magnification, Slide_ID, data source, and molecular subtype label
+├── preprocessing/                              # WSI preprocessing and tiling
+│   ├── tile_filtering.py                       # Removes background, white, and blurry tiles based on pixel intensity and variance
+│   └── tile_rename.py                          # Renames and organizes tiles retaining coordinates, Slide_ID, data source, and molecular subtype label
+│
+├── feature_extraction/                         # Tile-level feature extraction with UNI-2
+│   ├── UNI2_fextraction.py                     # Extracts 1536-D embeddings per tile from the UNI-2 encoder (ViT-H/14, DINOv2)
+│   └── Create_Tile_Features_dicts.py           # Builds per-slide dictionaries mapping each Slide_ID to its tile embeddings
+│
+├── mean_pooling_features/                      # Slide-level aggregation and visualization
+│   ├── Create_MeanPooling_vectors.py           # Generates mean-pooled 1536-D slide representations from tile embeddings
+│   └── LDA_analysis_mean_vectors.py            # Linear Discriminant Analysis for feature-space visualization of subtype separability
+│
+└── MIL/                                        # Multiple Instance Learning approaches
+    ├── MIL_training/                           # Attention-based deep MIL and tile-level LR training
+    │   ├── AttentionMIL_Callibration_Balance_training.py   # Attention MIL with class balancing and temperature calibration
+    │   └── LR_MIL.py                           # Tile-level logistic regression MIL (weakly supervised)
+    ├── MIL_evaluate/                           # MIL model evaluation
+    │   └── AttentionMIL_evaluate.py            # Evaluates trained MIL models and applies temperature scaling
+    └── Heatmaps/                               # Spatial attention and probability map visualizations
+        ├── HeatmapV2.py                        # Generates subtype-specific heatmaps highlighting informative tissue regions
+        └── heatmap_Local_optimized.py          # Optimized local version of the heatmap generation pipeline
 
-├── feature_extraction/                    # Tile-level feature extraction with UNI-2
-│   ├── UNI2_fextraction.py                # Extracts 1536-D embeddings from the UNI-2 encoder (ViT-H/14, DINOv2)
-│   └── Create_Tile_Features_dicts.py      # Builds per-slide dictionaries of extracted features;
-│                                          # each Slide_ID is a key containing tiles as subkeys and their 1536-D feature vectors as values
-
-├── mean_pooling_features/                 # Slide-level (mean-pooled) feature ML training and analysis
-│   ├── Create_MeanPooling_vectors.py      # Generates mean-pooled 1536-D slide representations from tile embeddings
-│   ├── LDA_analysis_mean_vectors.py       # Performs Linear Discriminant Analysis (LDA) for feature-space visualization
-│   └── ML_mean_features/                  # Classical ML models on pooled slide features
-│       ├── Logistic_models.py             # One-vs-Rest (OvR) logistic regression with/without calibration and class balancing
-│       ├── data_preperation/              # Train/validation/calibration split creation
-│       │   └── data_preperation.py        # Generates 80/20 train-test split and 8/1/1 train-eval-calib subsets and CV splits
-│                                          # Tracks all Slide_IDs to prevent data leakage
-│       └── Cosine_Similarity.py           # k-NN (cosine similarity) baseline on mean-pooled vectors
-
-├── MIL/                                   # Multiple Instance Learning (MIL) approaches
-│   ├── MIL_training/                      # Attention-based deep MIL and tile-level MIL training
-│   │   ├── AttentionMIL_Callibration_Balance_training.py  # Attention-based MIL with class balancing and temperature calibration
-│   │   └── LR_MIL.py                      # Tile-level logistic regression MIL
-│   ├── MIL_evaluate/                      # MIL model evaluation and calibration
-│   │   └── AttentionMIL_evaluate.py       # Evaluates MIL models and applies temperature scaling
-│   └── Heatmaps/                          # Visualization of spatial attention and probability maps
-│       └── HeatmapV2.py                   # Generates subtype-specific heatmaps highlighting informative tissue regions
+src_revision/
+├── data_split/                                 # Reproducible patient-level stratified data splitting
+│   ├── Datasplit_train_test.py                 # Creates 80/20 patient-level train/test split for MIL PKL data;
+│   │                                           # stratifies on label × cohort composite key to prevent patient-level leakage
+│   └── mean_features_datasplit.py              # Replicates the same patient split for mean-pooled feature matrices
+│                                               # using the split report JSON (avoids reloading the full MIL PKL)
+│
+├── Slide_Level_LR_kNN_train_eval/              # Slide-level (mean-pooled) model training and evaluation
+│   ├── LR_MeanPooling_OvR.py                  # OvR Logistic Regression on mean-pooled slide features; patient-level 80/10/10
+│   │                                           # train/val/cal split; optional temperature scaling and class-imbalance strategies
+│   ├── LR_evaluate_case_level.py              # Evaluates LR slide-level models at slide and patient/case level with 95% CIs
+│   └── CosineKNN_MeanPooling.py               # k-NN classifier with cosine similarity on mean-pooled embeddings;
+│                                               # K selected by 5-fold stratified CV (K ∈ {1,3,5,7,9,15,21}) on the training split
+│
+├── MIL_train_eval/                             # Attention-based MIL training and evaluation (revised)
+│   ├── Attention_based_MIL.py                 # Trains OvR AttentionMIL classifiers with balancing and temperature calibration;
+│   │                                           # evaluates per epoch with binary metrics; saves best model by validation F1
+│   └── Attention_MIL_evaluate_per_case.py     # Evaluates MIL models at slide and patient/case level; exports attention weights,
+│                                               # PR/ROC curves, confusion matrices, and JSON metrics
+│
+└── LR_tile_train_eval/                         # Tile-level Logistic Regression training and evaluation (revised)
+    ├── LR_tile_level.py                        # Weakly supervised OvR LR on tile features; patient-level 5-fold CV splits;
+    │                                           # oversampling via imblearn Pipeline; optional slide-level probability aggregation
+    └── Evaluate_per_case_tile_level_LR.py      # Evaluates tile-level LR at tile, slide, and patient/case level with 95% CIs;
+                                                # source-stratified metrics (TCGA / CPTAC / Warwick); exports PR/ROC curves
 ```
 
 

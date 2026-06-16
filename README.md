@@ -28,7 +28,7 @@ Our end-to-end pipeline for weakly supervised breast cancer molecular subtyping 
 
    Patient-level splits were created with an **80/20 train-test** ratio, followed by an **8/1/1** subdivision of the training set into train, validation, and      calibration subsets for cross-validation and probability calibration where applicable.
    
-   To prevent data leakage, all tiles from a single patient were assigned to the same split, with stratification by molecular subtype and data source.  
+   To prevent data leakage, all tiles and slides from a single patient were assigned to the same split, with stratification by molecular subtype and data source.  
    Mean-pooling of tile embeddings produced a single 1536-dimensional slide vector for classical ML models.
     
    Linear Discriminant Analysis (LDA) was applied to visualize subtype separability in feature space.

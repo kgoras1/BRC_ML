@@ -1,0 +1,118 @@
+{
+  "mil_pkl": "/home/projects2/WSI_project/PhD_WSI/BRC-WSI-Revision/Datasplits_MIL/mil_data_seed_42_TCGA_Warwick_CPTAC_Resplit.pkl",
+  "output_dir": "/home/projects2/WSI_project/PhD_WSI/BRC-WSI-Revision/MIL_training/seed_42",
+  "classes": [
+    "Basal",
+    "HER2",
+    "LumA",
+    "LumB"
+  ],
+  "n_classes": 4,
+  "input_dim": 1536,
+  "epochs": 50,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "hidden_dim": 256,
+  "dropout_rate": 0.0,
+  "calibrated": true,
+  "temperatures": [
+    2.7366834170854273,
+    4.925628140703518,
+    6.517587939698492,
+    3.0849246231155782
+  ],
+  "seed": 42,
+  "oversample": false,
+  "train_size": 1151,
+  "test_size": 282,
+  "per_class": [
+    {
+      "class_idx": 0,
+      "class_name": "Basal",
+      "model_path": "/home/projects2/WSI_project/PhD_WSI/BRC-WSI-Revision/MIL_training/seed_42/class_0_Basal/model_0_Basal.pt",
+      "split_strategy": "patient-level",
+      "train_counts": {
+        "neg": 736,
+        "pos": 175,
+        "n_patients": 705
+      },
+      "val_counts": {
+        "neg": 82,
+        "pos": 24,
+        "n_patients": 89
+      },
+      "calib_counts": {
+        "neg": 97,
+        "pos": 37,
+        "n_patients": 89
+      },
+      "best_val_f1": 0.8163265306122449
+    },
+    {
+      "class_idx": 1,
+      "class_name": "HER2",
+      "model_path": "/home/projects2/WSI_project/PhD_WSI/BRC-WSI-Revision/MIL_training/seed_42/class_1_HER2/model_1_HER2.pt",
+      "split_strategy": "patient-level",
+      "train_counts": {
+        "neg": 799,
+        "pos": 116,
+        "n_patients": 705
+      },
+      "val_counts": {
+        "neg": 95,
+        "pos": 16,
+        "n_patients": 89
+      },
+      "calib_counts": {
+        "neg": 102,
+        "pos": 23,
+        "n_patients": 89
+      },
+      "best_val_f1": 0.7857142857142857
+    },
+    {
+      "class_idx": 2,
+      "class_name": "LumA",
+      "model_path": "/home/projects2/WSI_project/PhD_WSI/BRC-WSI-Revision/MIL_training/seed_42/class_2_LumA/model_2_LumA.pt",
+      "split_strategy": "patient-level",
+      "train_counts": {
+        "neg": 489,
+        "pos": 438,
+        "n_patients": 705
+      },
+      "val_counts": {
+        "neg": 51,
+        "pos": 58,
+        "n_patients": 89
+      },
+      "calib_counts": {
+        "neg": 63,
+        "pos": 52,
+        "n_patients": 89
+      },
+      "best_val_f1": 0.7931034482758621
+    },
+    {
+      "class_idx": 3,
+      "class_name": "LumB",
+      "model_path": "/home/projects2/WSI_project/PhD_WSI/BRC-WSI-Revision/MIL_training/seed_42/class_3_LumB/model_3_LumB.pt",
+      "split_strategy": "patient-level",
+      "train_counts": {
+        "neg": 755,
+        "pos": 168,
+        "n_patients": 705
+      },
+      "val_counts": {
+        "neg": 98,
+        "pos": 22,
+        "n_patients": 89
+      },
+      "calib_counts": {
+        "neg": 86,
+        "pos": 22,
+        "n_patients": 89
+      },
+      "best_val_f1": 0.5641025641025641
+    }
+  ]
+}

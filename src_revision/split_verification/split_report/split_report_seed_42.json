@@ -1,0 +1,6851 @@
+{
+  "meta": {
+    "created": "2026-06-06T12:16:06.619103",
+    "seed": 42,
+    "test_size": 0.2,
+    "input_pkl": "/net/well/pool/projects2/WSI_project/PhD_WSI/feature_extraction/ml_attention_pooling/end_2_end_MIL_splits/mil_data/mil_data_seed_42_TCGA_Warwick_Clean.pkl",
+    "output_pkl": "/net/well/pool/projects2/WSI_project/PhD_WSI/BRC-WSI-Revision/Datasplits_MIL/mil_data_seed_42_TCGA_Warwick_CPTAC_Resplit.pkl",
+    "strategy": "patient-level split, stratified on label x cohort"
+  },
+  "overall": {
+    "n_slides": 1433,
+    "n_patients": 1104,
+    "total_tiles": 12534150,
+    "mean_tiles_per_slide": 8746.78995115143,
+    "class_names": [
+      "Basal",
+      "HER2",
+      "LumA",
+      "LumB"
+    ],
+    "by_label": {
+      "Basal": 295,
+      "HER2": 195,
+      "LumA": 678,
+      "LumB": 265
+    },
+    "by_cohort": {
+      "CPTAC": 382,
+      "TCGA": 971,
+      "Warwick": 80
+    }
+  },
+  "train": {
+    "split": "train",
+    "n_slides": 1151,
+    "n_patients": 883,
+    "total_tiles": 9919766,
+    "mean_tiles_per_slide": 8618.38922675934,
+    "by_cohort": {
+      "CPTAC": {
+        "n_slides": 310,
+        "n_patients": 92
+      },
+      "TCGA": {
+        "n_slides": 777,
+        "n_patients": 727
+      },
+      "Warwick": {
+        "n_slides": 64,
+        "n_patients": 64
+      }
+    },
+    "by_label": {
+      "Basal": {
+        "n_slides": 236,
+        "n_patients": 154
+      },
+      "HER2": {
+        "n_slides": 155,
+        "n_patients": 135
+      },
+      "LumA": {
+        "n_slides": 548,
+        "n_patients": 424
+      },
+      "LumB": {
+        "n_slides": 212,
+        "n_patients": 170
+      }
+    },
+    "by_label_cohort": {
+      "Basal_CPTAC": {
+        "label": "Basal",
+        "cohort": "CPTAC",
+        "n_slides": 98,
+        "n_patients": 22
+      },
+      "Basal_TCGA": {
+        "label": "Basal",
+        "cohort": "TCGA",
+        "n_slides": 138,
+        "n_patients": 132
+      },
+      "HER2_CPTAC": {
+        "label": "HER2",
+        "cohort": "CPTAC",
+        "n_slides": 31,
+        "n_patients": 11
+      },
+      "HER2_TCGA": {
+        "label": "HER2",
+        "cohort": "TCGA",
+        "n_slides": 60,
+        "n_patients": 60
+      },
+      "HER2_Warwick": {
+        "label": "HER2",
+        "cohort": "Warwick",
+        "n_slides": 64,
+        "n_patients": 64
+      },
+      "LumA_CPTAC": {
+        "label": "LumA",
+        "cohort": "CPTAC",
+        "n_slides": 146,
+        "n_patients": 45
+      },
+      "LumA_TCGA": {
+        "label": "LumA",
+        "cohort": "TCGA",
+        "n_slides": 402,
+        "n_patients": 379
+      },
+      "LumB_CPTAC": {
+        "label": "LumB",
+        "cohort": "CPTAC",
+        "n_slides": 35,
+        "n_patients": 14
+      },
+      "LumB_TCGA": {
+        "label": "LumB",
+        "cohort": "TCGA",
+        "n_slides": 177,
+        "n_patients": 156
+      }
+    },
+    "patient_detail": [
+      {
+        "patient_id": "01BR001",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 7
+      },
+      {
+        "patient_id": "01BR008",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "01BR009",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "01BR015",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "01BR017",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "01BR018",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "01BR020",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "01BR023",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "01BR025",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "01BR026",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "01BR030",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "01BR033",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "01BR040",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "01BR042",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 10
+      },
+      {
+        "patient_id": "03BR002",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "03BR004",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "03BR005",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "03BR006",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "03BR011",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "03BR013",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "05BR001",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "05BR003",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "05BR004",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "05BR005",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "05BR009",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "05BR016",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "05BR026",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "05BR029",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 9
+      },
+      {
+        "patient_id": "05BR038",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "05BR043",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "05BR044",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "05BR045",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "06BR005",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "06BR014",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "09BR001",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "09BR005",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "09BR007",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "11BR003",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR004",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "11BR006",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "11BR009",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR011",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR013",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR015",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR016",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR017",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "11BR018",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR019",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR020",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR024",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR025",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR027",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR028",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR030",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR031",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR036",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR040",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR042",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR043",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR044",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR050",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR051",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR053",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR054",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR060",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR072",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR073",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR080",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "13BR009",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "14BR008",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "14BR014",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "15BR003",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "16BR012",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "18BR002",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "18BR003",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "18BR004",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "18BR006",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "18BR010",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "18BR016",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "18BR017",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "18BR019",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "20BR001",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "20BR002",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "20BR005",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "20BR006",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "20BR007",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "20BR008",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 6
+      },
+      {
+        "patient_id": "21BR001",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "21BR002",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "21BR010",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "22BR005",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "22BR006",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_05",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_07",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_10",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_17",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_20",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_37",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_41",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_42",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_43",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_44",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_45",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_51",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_53",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_56",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_59",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_62",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_69",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_04",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_05",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_06",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_09",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_10",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_11",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_12",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_14",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_15",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_16",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_19",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_25",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_27",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_30",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_33",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_34",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_35",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_36",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_37",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_38",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_41",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_42",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_43",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_44",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_45",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_48",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_49",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_50",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_51",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_53",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_54",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_56",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_58",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_59",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_61",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_63",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_65",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_67",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_72",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_74",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_75",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_79",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_82",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_83",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_84",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_86",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_88",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-3C-AALJ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-4H-AAAK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-5L-AAT0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-5T-A9QA",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SF",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SI",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SJ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SK",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04P",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04Q",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04R",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04T",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04U",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04V",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04X",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CM",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CR",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CT",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CW",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CX",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0D3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EQ",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0ER",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0ES",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0ET",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EY",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0SU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0SV",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0SW",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0SX",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T0",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T1",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T2",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T3",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T4",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0T7",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YE",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YF",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YG",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YH",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YL",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YT",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A1FV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A1FW",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A1FX",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A1FZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A1G0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A1G1",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A1G4",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A259",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A25B",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A25C",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A25F",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A3XU",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A3XV",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A3XX",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A3XZ",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A4S1",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A4S2",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A4S3",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A0CD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A0CE",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A0CG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A0CH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A0CJ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A0D9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A0DA",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A0DB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A13D",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A13E",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A13F",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A13G",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A26E",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A26F",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A26G",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A26H",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A26I",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A2KD",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A3RF",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A425",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A4SD",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A4SE",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A56D",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A5ZV",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A5ZW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A5ZX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A6VV",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A6VW",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06N",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06O",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06P",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06Q",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06R",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06U",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06Y",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06Z",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A076",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A079",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07B",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07F",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07G",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07I",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07J",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07O",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07P",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07U",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07W",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07Z",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A081",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A082",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A083",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08A",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08B",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08I",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08J",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08L",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08O",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08R",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08T",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08X",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08Z",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A090",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A091",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A092",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A093",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A094",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A095",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A096",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A097",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A099",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09B",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09C",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09D",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09G",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09I",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09M",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09N",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09Q",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09R",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09V",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09W",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09X",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09Z",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A0A1",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A0A4",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A0AB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A23C",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A23E",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A23H",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2B8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2BK",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2BM",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2FG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2FO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2QH",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A3HN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A3OD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A3QQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A3YJ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A4ZE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A5EH",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A5XS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A5XU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A62X",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A62Y",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A6IV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A6IW",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A6IX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A6NO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A7VC",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A8OP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A8OQ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A03Y",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A041",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0AJ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0AK",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0AL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0AR",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0AS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0AT",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FF",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FJ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FV",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FY",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XT",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A03L",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A03M",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A03O",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A03V",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J2",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J3",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J4",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JD",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JE",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JM",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A125",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A126",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A129",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A12A",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A12B",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A12F",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A12G",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A1KP",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A1KR",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A1KT",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AQ-A04H",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AQ-A0Y5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AQ-A7U7",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TQ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TR",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TS",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TT",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TX",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TY",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0U0",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0U2",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0U4",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AI",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AJ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AL",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AQ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AR",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AW",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AY",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24K",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24L",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24M",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24N",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24O",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24P",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24Q",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24R",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24T",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24U",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24V",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24W",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24X",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24Z",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A250",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A251",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A252",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A254",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A255",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A256",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A2LK",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A2LO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A5QM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A5QN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A5QP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0I1",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0I2",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0I9",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IB",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IJ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IK",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IN",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IQ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RE",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RH",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RL",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RS",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RT",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RU",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0RV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0WS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0WT",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0WV",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0WW",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0WY",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0X0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0X1",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0X4",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0X5",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0X7",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A1KC",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A1KF",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A1KI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A2IU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0AY",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0AZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0B0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0B3",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0B5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0B7",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0B9",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BD",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BF",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BG",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BJ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BR",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BZ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0C0",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0C1",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0C3",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DT",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0E0",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0E7",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0E9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0EA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0EB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0EE",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0EI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0GY",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0H0",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0H5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0H6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0H9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HU",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HW",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HY",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0RX",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0W3",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0W4",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0W5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0W7",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0WA",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18F",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18G",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18H",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18I",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18J",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18L",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18M",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18P",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18Q",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18R",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18S",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18T",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18U",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18V",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1EN",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1EO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1ET",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1EW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1EX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1F0",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1F6",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1F8",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FC",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A201",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A202",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A203",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A204",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A209",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A28Q",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A2L8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A42V",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A5IZ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12K",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12L",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12M",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12N",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12O",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12P",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12Q",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12T",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12U",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12W",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12X",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A130",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A131",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A133",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A134",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A135",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A137",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A138",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HF",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HJ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HK",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HL",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HM",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HN",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A26V",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A26W",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A26X",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A26Y",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A26Z",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A273",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A274",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A275",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A27A",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A3M7",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A3M8",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A8HQ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A140",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A141",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A142",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A143",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A145",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1J8",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1J9",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1JB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JC",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1JD",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1JE",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1JF",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JG",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JJ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1JK",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JM",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JT",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1JU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1X5",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1X6",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1X7",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1X8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1X9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XF",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XK",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XL",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XQ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XR",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XT",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1XV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XY",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XZ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1Y1",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1Y2",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1Y3",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A27F",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27G",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27H",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27I",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27K",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27M",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27P",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27R",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A27V",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A3Z6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "TCGA-D8-A4Z1",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A73U",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A73W",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A73X",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-E2-A105",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A107",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A109",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A10A",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A10B",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A10C",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14N",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14O",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14P",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14Q",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14R",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14T",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14V",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14X",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14Y",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A14Z",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A150",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A152",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A155",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A156",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A158",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A159",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15A",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15C",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15D",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15E",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15G",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15H",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15J",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15K",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15L",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15M",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15O",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15P",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15R",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15S",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15T",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1AZ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1B0",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1B1",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1B5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1B6",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1BC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1BD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IF",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1II",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IJ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IL",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1IU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1L6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1L7",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1L8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1LA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1LB",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1LK",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1LL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A2P6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A56Z",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A570",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A574",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A576",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A9RU",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1N3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1N4",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1N8",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1N9",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1NA",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1NC",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1ND",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1NE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1NF",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1NG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1NH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1NI",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1R2",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1R3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1R4",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1R5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1R6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RE",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RG",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RH",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A226",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A227",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A22B",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A22E",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A22G",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A22H",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A243",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A244",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A245",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A247",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A248",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A249",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A295",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A2JS",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A2JT",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A3QA",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A3X8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A54Y",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A5FK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A5FL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A5UO",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A6HE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1IW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1IX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1IY",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1IZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1J2",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1J3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1J6",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1OX",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1OY",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1P0",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1P3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1P4",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1P5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1P6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1P8",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1PA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1PB",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1PE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1PH",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A2FR",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A2FV",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A423",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-EW-A6S9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A6SB",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A6SC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A6SD",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GI-A2C8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2D9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DB",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DH",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DL",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DO",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A3NW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A3XL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A4E0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-HN-A2NL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-HN-A2OB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LD-A66U",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LD-A74U",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A440",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A50Y",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A5YL",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A5YM",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A5YN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A5YO",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A5YP",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A6FP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A6FQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A6FR",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A73Y",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A740",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A7SZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A7T0",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A8F5",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LL-A9Q3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A5D7",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A5DA",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66H",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66I",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66J",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66K",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66L",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66N",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66O",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A66P",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A6VO",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OL-A6VQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-PE-A5DC",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-PE-A5DD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-PE-A5DE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-PL-A8LX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-PL-A8LZ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "TCGA-S3-A6ZF",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-S3-A6ZG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-S3-A6ZH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-S3-AA0Z",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-S3-AA10",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-S3-AA12",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-S3-AA14",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-S3-AA17",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-UL-AAZ6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-W8-A86G",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-WT-AB41",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-XX-A899",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-XX-A89A",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-Z7-A8R5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-Z7-A8R6",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      }
+    ]
+  },
+  "test": {
+    "split": "test",
+    "n_slides": 282,
+    "n_patients": 221,
+    "total_tiles": 2614384,
+    "mean_tiles_per_slide": 9270.86524822695,
+    "by_cohort": {
+      "CPTAC": {
+        "n_slides": 72,
+        "n_patients": 23
+      },
+      "TCGA": {
+        "n_slides": 194,
+        "n_patients": 182
+      },
+      "Warwick": {
+        "n_slides": 16,
+        "n_patients": 16
+      }
+    },
+    "by_label": {
+      "Basal": {
+        "n_slides": 59,
+        "n_patients": 38
+      },
+      "HER2": {
+        "n_slides": 40,
+        "n_patients": 34
+      },
+      "LumA": {
+        "n_slides": 130,
+        "n_patients": 107
+      },
+      "LumB": {
+        "n_slides": 53,
+        "n_patients": 42
+      }
+    },
+    "by_label_cohort": {
+      "Basal_CPTAC": {
+        "label": "Basal",
+        "cohort": "CPTAC",
+        "n_slides": 25,
+        "n_patients": 5
+      },
+      "Basal_TCGA": {
+        "label": "Basal",
+        "cohort": "TCGA",
+        "n_slides": 34,
+        "n_patients": 33
+      },
+      "HER2_CPTAC": {
+        "label": "HER2",
+        "cohort": "CPTAC",
+        "n_slides": 8,
+        "n_patients": 3
+      },
+      "HER2_TCGA": {
+        "label": "HER2",
+        "cohort": "TCGA",
+        "n_slides": 16,
+        "n_patients": 15
+      },
+      "HER2_Warwick": {
+        "label": "HER2",
+        "cohort": "Warwick",
+        "n_slides": 16,
+        "n_patients": 16
+      },
+      "LumA_CPTAC": {
+        "label": "LumA",
+        "cohort": "CPTAC",
+        "n_slides": 30,
+        "n_patients": 12
+      },
+      "LumA_TCGA": {
+        "label": "LumA",
+        "cohort": "TCGA",
+        "n_slides": 100,
+        "n_patients": 95
+      },
+      "LumB_CPTAC": {
+        "label": "LumB",
+        "cohort": "CPTAC",
+        "n_slides": 9,
+        "n_patients": 3
+      },
+      "LumB_TCGA": {
+        "label": "LumB",
+        "cohort": "TCGA",
+        "n_slides": 44,
+        "n_patients": 39
+      }
+    },
+    "patient_detail": [
+      {
+        "patient_id": "01BR010",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "01BR027",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 7
+      },
+      {
+        "patient_id": "01BR031",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "01BR032",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "01BR043",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "03BR010",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "05BR042",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 5
+      },
+      {
+        "patient_id": "06BR003",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "11BR010",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR012",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR014",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR022",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR023",
+        "cohort": "CPTAC",
+        "label": "Basal",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR032",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR038",
+        "cohort": "CPTAC",
+        "label": "HER2",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR047",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR049",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR055",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR056",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "11BR074",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "11BR075",
+        "cohort": "CPTAC",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "14BR005",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 3
+      },
+      {
+        "patient_id": "18BR007",
+        "cohort": "CPTAC",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_54",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_64",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_72",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Testing_75",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_07",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_17",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_20",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_24",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_26",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_32",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_40",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_47",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_55",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_62",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_64",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "HER2_Warwick_Training_69",
+        "cohort": "Warwick",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-3C-AALI",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-3C-AALK",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SN",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A1-A0SP",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04N",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04W",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A04Y",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0CS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0D0",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0D4",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0EO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0ST",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0SY",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YJ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A0YM",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A25D",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A25E",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A3KD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A3XT",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A2-A3Y0",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A26J",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A7-A6VX",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-A7-A6VY",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06T",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A06X",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A075",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07E",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A07L",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A086",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08G",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A08P",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09A",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A09T",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A0A2",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A0A7",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A0A9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-A8-A0AD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2FB",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A2FF",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A3QP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A3W5",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A7VB",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A8OR",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AC-A8OS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A046",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0AM",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FD",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FT",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0FX",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XL",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AN-A0XU",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A03N",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A03P",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J6",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0J7",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JF",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A0JJ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A124",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A128",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A12D",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A12E",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A12H",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AO-A1KS",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AQ-A04J",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TP",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TV",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0TW",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A0U3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AH",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A1AN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24H",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A24S",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A2LE",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A2LM",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A2LN",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-AR-A5QQ",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0I5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IG",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0IO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0WX",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A0WZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-B6-A1KN",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0AU",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0AV",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0AW",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BO",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BT",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0BW",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0C7",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DL",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0DX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0E1",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0E2",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0E6",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0GZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0H3",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0H7",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HP",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A0HQ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A18N",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1EU",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1EV",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1EY",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1F2",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FH",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FJ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FL",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FM",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FN",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A1FR",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-BH-A5J0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12V",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12Y",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A12Z",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A132",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A1HG",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A278",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A27B",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-C8-A8HP",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A13Y",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A13Z",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A147",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JA",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1JI",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A1XJ",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A1Y0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A27E",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27L",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-D8-A27N",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A27T",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-D8-A27W",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-E2-A10F",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A153",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A154",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15F",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A15I",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1B4",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1L9",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1LG",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1LH",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A1LI",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E2-A573",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1N5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1QZ",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1R0",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1R7",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RB",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RF",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A1RI",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A228",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A229",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A22A",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A22D",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A24A",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-E9-A3HO",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1J1",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1J5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1OV",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A1OZ",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A2FS",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-EW-A2FW",
+        "cohort": "TCGA",
+        "label": "LumB",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-GM-A2DF",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-JL-A3YX",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LD-A7W5",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-LD-A7W6",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-OK-A5Q2",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 4
+      },
+      {
+        "patient_id": "TCGA-OL-A5D8",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-PL-A8LV",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 2
+      },
+      {
+        "patient_id": "TCGA-S3-AA11",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-S3-AA15",
+        "cohort": "TCGA",
+        "label": "Basal",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-UU-A93S",
+        "cohort": "TCGA",
+        "label": "HER2",
+        "n_slides_in_split": 1
+      },
+      {
+        "patient_id": "TCGA-WT-AB44",
+        "cohort": "TCGA",
+        "label": "LumA",
+        "n_slides_in_split": 1
+      }
+    ]
+  }
+}

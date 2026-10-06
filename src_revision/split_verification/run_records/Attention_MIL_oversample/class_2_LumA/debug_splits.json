@@ -1,0 +1,29 @@
+{
+  "split_strategy": "patient-level",
+  "overall_train_counts": {
+    "neg": 603,
+    "pos": 548,
+    "pos_rate": 0.476107732406603
+  },
+  "train_counts": {
+    "neg": 489,
+    "pos": 438,
+    "pos_rate": 0.47249190938511326,
+    "n_patients": 705
+  },
+  "val_counts": {
+    "neg": 51,
+    "pos": 58,
+    "pos_rate": 0.5321100917431193,
+    "n_patients": 89
+  },
+  "calib_counts": {
+    "neg": 63,
+    "pos": 52,
+    "pos_rate": 0.45217391304347826,
+    "n_patients": 89
+  },
+  "mode": "oversample",
+  "seed": 42,
+  "batch_size": 8
+}

@@ -1,0 +1,29 @@
+{
+  "split_strategy": "patient-level",
+  "overall_train_counts": {
+    "neg": 996,
+    "pos": 155,
+    "pos_rate": 0.13466550825369245
+  },
+  "train_counts": {
+    "neg": 799,
+    "pos": 116,
+    "pos_rate": 0.126775956284153,
+    "n_patients": 705
+  },
+  "val_counts": {
+    "neg": 95,
+    "pos": 16,
+    "pos_rate": 0.14414414414414414,
+    "n_patients": 89
+  },
+  "calib_counts": {
+    "neg": 102,
+    "pos": 23,
+    "pos_rate": 0.184,
+    "n_patients": 89
+  },
+  "mode": "class_weighted_ce",
+  "seed": 42,
+  "batch_size": 8
+}

@@ -1,41 +1,30 @@
 # Split verification
 
-Evidence that all reported results use a patient-level train/test split, and that
-no fallback branch in the splitting code was used.
+## Train/test split
+`split_report/` contains the report written by `../data_split/Datasplit_train_test.py`
+(patients and WSIs per partition, subtype × cohort stratum and patient).
 
-## Contents
+## Fallback branches
+`patient_stratified_train_val_cal_split()` in `../MIL_train_eval/Attention_based_MIL.py` and
+`../Slide_Level_LR_kNN_train_eval/LR_MeanPooling_OvR.py` contains fallback branches
+(`_slide_level_split()` and the `except ValueError` blocks). They were written as safeguards
+for the early pipeline tests on small data subsets, where a class can have too few patients
+for a stratified patient-level split.
 
-| Path | What it is |
-|---|---|
-| `split_report/split_report_seed_42.{json,txt}` | Report written by `../data_split/Datasplit_train_test.py`: patients and WSIs per partition, per subtype × cohort stratum, and per patient. |
-| `run_records/Attention_MIL_weighted_ce/`, `run_records/Attention_MIL_oversample/` | `training_summary.json` and per-class `debug_splits.json` written by `../MIL_train_eval/Attention_based_MIL.py`. |
-| `run_records/LR_mean_pooling/` | `training_summary.json` written by `../Slide_Level_LR_kNN_train_eval/LR_MeanPooling_OvR.py`, one per imbalance/calibration setting. |
-| `replay_splits.py` | Re-executes the published splitting functions with the seeds and arguments of the reported runs. |
-| `replay_splits_output.json` | Output of `replay_splits.py`. |
-
-Run records are copied unedited from the training runs (absolute paths refer to our HPC).
-
-## How the checks work
-
-**Train/test split.** `Datasplit_train_test.py` splits unique patients (not WSIs) with a
-single stratified `train_test_split` on a subtype × cohort key, assigns all WSIs of a patient
-to that patient's partition, and asserts that no patient appears in both partitions. Its only
-fallback (label-only stratification) applies when a subtype × cohort stratum has fewer than
-2 patients; the smallest stratum in the data has 14.
-
-**Internal splits.** For every one-vs-rest classifier, the MIL and slide-level LR scripts record
-`split_strategy` (`patient-level` or `slide-level (fallback)`) and the number of patients in each
-partition. Patient counts are only populated on the patient-level path, and an empty calibration
-set would show as 0 patients. All recorded runs report `patient-level` with populated calibration sets.
-
-**Replay.** `replay_splits.py` wraps the fallback functions to count every call, re-runs all
-internal splits (MIL 80/10/10, slide-level LR 80/20, tile-level LR 80/20), and checks that:
-- no fallback function is called;
-- partitions are patient-disjoint and disjoint from the test set;
-- the replayed patient counts equal those in `run_records/`.
+`verify_fallbacks.py` re-executes this function for every reported run and one-vs-rest
+classifier, with the same arguments and seed, and counts each fallback call and each caught
+`ValueError`:
 
 ```bash
-python replay_splits.py --mean_features_pkl path/to/mean_features_train_test_seed_42.pkl
+python verify_fallbacks.py --mean_features_pkl path/to/mean_features_train_test_seed_42.pkl
 ```
 
-The k-NN classifier performs no internal split.
+Output: `verify_fallbacks_output.txt` / `.json` — 0 fallbacks for all classifiers.
+
+Example of a case where the fallback *would* apply: a subset containing only 2 HER2 patients
+cannot be split into stratified train/validation/calibration sets at patient level, and the
+script reports one `_slide_level_split()` call. In the full dataset every class has well over
+100 patients in the training set.
+
+`run_records/` contains the unedited run summaries written during training, which record
+the split strategy (`patient-level`) for every classifier.

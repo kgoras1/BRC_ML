@@ -1,0 +1,325 @@
+{
+  "total_fallbacks": 0,
+  "per_classifier": [
+    {
+      "run": "Attention_MIL_weighted_ce",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "Attention_MIL_weighted_ce",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "Attention_MIL_weighted_ce",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "Attention_MIL_weighted_ce",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "Attention_MIL_oversample",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "Attention_MIL_oversample",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "Attention_MIL_oversample",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "Attention_MIL_oversample",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_nocal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_nocal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_nocal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_nocal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_cal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_cal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_cal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_none_cal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_nocal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_nocal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_nocal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_nocal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_cal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_cal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_cal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_oversample_cal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_nocal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_nocal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_nocal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_nocal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_cal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_cal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_cal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_undersample_cal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_nocal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_nocal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_nocal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_nocal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_cal",
+      "classifier": "Basal vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_cal",
+      "classifier": "HER2 vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_cal",
+      "classifier": "LumA vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    },
+    {
+      "run": "LR_mean_pooling/imbalance_smote_cal",
+      "classifier": "LumB vs rest",
+      "split": "patient-level",
+      "slide_level_fallback": 0,
+      "value_error_caught": 0,
+      "fallbacks_total": 0
+    }
+  ]
+}

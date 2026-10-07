@@ -1,43 +1,47 @@
-run                                        classifier       split          fallbacks
-Attention_MIL_weighted_ce                  Basal vs rest    patient-level  0
-Attention_MIL_weighted_ce                  HER2 vs rest     patient-level  0
-Attention_MIL_weighted_ce                  LumA vs rest     patient-level  0
-Attention_MIL_weighted_ce                  LumB vs rest     patient-level  0
-Attention_MIL_oversample                   Basal vs rest    patient-level  0
-Attention_MIL_oversample                   HER2 vs rest     patient-level  0
-Attention_MIL_oversample                   LumA vs rest     patient-level  0
-Attention_MIL_oversample                   LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_none_nocal       Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_none_nocal       HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_none_nocal       LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_none_nocal       LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_none_cal         Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_none_cal         HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_none_cal         LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_none_cal         LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_oversample_nocal Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_oversample_nocal HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_oversample_nocal LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_oversample_nocal LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_oversample_cal   Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_oversample_cal   HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_oversample_cal   LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_oversample_cal   LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_undersample_nocal Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_undersample_nocal HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_undersample_nocal LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_undersample_nocal LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_undersample_cal  Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_undersample_cal  HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_undersample_cal  LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_undersample_cal  LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_smote_nocal      Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_smote_nocal      HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_smote_nocal      LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_smote_nocal      LumB vs rest     patient-level  0
-LR_mean_pooling/imbalance_smote_cal        Basal vs rest    patient-level  0
-LR_mean_pooling/imbalance_smote_cal        HER2 vs rest     patient-level  0
-LR_mean_pooling/imbalance_smote_cal        LumA vs rest     patient-level  0
-LR_mean_pooling/imbalance_smote_cal        LumB vs rest     patient-level  0
+Train/test split: 883 train patients, 221 test patients, shared = 0
 
-Total fallbacks across 40 classifiers: 0
+run                                          classifier     split          train/val/cal/test patients  shared fallbacks
+Attention_MIL_weighted_ce                    Basal vs rest  patient-level  705/89/89/221                     0         0
+Attention_MIL_weighted_ce                    HER2 vs rest   patient-level  705/89/89/221                     0         0
+Attention_MIL_weighted_ce                    LumA vs rest   patient-level  705/89/89/221                     0         0
+Attention_MIL_weighted_ce                    LumB vs rest   patient-level  705/89/89/221                     0         0
+Attention_MIL_oversample                     Basal vs rest  patient-level  705/89/89/221                     0         0
+Attention_MIL_oversample                     HER2 vs rest   patient-level  705/89/89/221                     0         0
+Attention_MIL_oversample                     LumA vs rest   patient-level  705/89/89/221                     0         0
+Attention_MIL_oversample                     LumB vs rest   patient-level  705/89/89/221                     0         0
+LR_mean_pooling/imbalance_none_nocal         Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_none_nocal         HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_none_nocal         LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_none_nocal         LumB vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_none_cal           Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_none_cal           HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_none_cal           LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_none_cal           LumB vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_nocal   Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_nocal   HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_nocal   LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_nocal   LumB vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_cal     Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_cal     HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_cal     LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_oversample_cal     LumB vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_nocal  Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_nocal  HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_nocal  LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_nocal  LumB vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_cal    Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_cal    HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_cal    LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_undersample_cal    LumB vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_nocal        Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_nocal        HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_nocal        LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_nocal        LumB vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_cal          Basal vs rest  patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_cal          HER2 vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_cal          LumA vs rest   patient-level  706/0/177/221                     0         0
+LR_mean_pooling/imbalance_smote_cal          LumB vs rest   patient-level  706/0/177/221                     0         0
+
+Train/test shared patients: 0
+Shared patients between any two partitions, all 40 classifiers: 0
+Fallback calls, all 40 classifiers: 0

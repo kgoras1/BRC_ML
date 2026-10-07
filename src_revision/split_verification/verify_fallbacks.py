@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Count how often the fallback branches of the patient-level split were used.
+Check the patient-level splits of every reported run: patient leakage and fallback calls.
 
 Covers the two scripts in which they are defined:
   - MIL_train_eval/Attention_based_MIL.py               (80/10/10 train/val/cal)
@@ -8,7 +8,9 @@ Covers the two scripts in which they are defined:
 
 For every reported run and one-vs-rest classifier, the split function
 patient_stratified_train_val_cal_split() is re-executed with the arguments and
-seed of that run, and two things are counted:
+seed of that run, and the following are checked:
+  - shared_patients      : patients appearing in more than one of train / val / cal /
+                           test (test = held-out set from data_split/Datasplit_train_test.py)
   - slide_level_fallback : calls to _slide_level_split()
                            (no patient IDs, < 3 patients per class, failed
                             validation split, or single-class val/cal subset)
@@ -80,8 +82,14 @@ def main():
     slide_ids = list(d["train_ids"])
     classes = list(d["class_names"])
     y = np.array([classes.index(l) for l in d["train_labels"]])
+    pid = [mil.get_patient_id(str(s)) for s in slide_ids]
+    test_pats = {mil.get_patient_id(str(s)) for s in d["test_ids"]}
+    train_pats = set(pid)
+    n_train_test_shared = len(train_pats & test_pats)
+    print(f"Train/test split: {len(train_pats)} train patients, {len(test_pats)} test patients, "
+          f"shared = {n_train_test_shared}\n")
 
-    results, total = [], 0
+    results, total, total_shared = [], 0, 0
     for run, (module, split_args) in RUNS.items():
         for k, cls in enumerate(classes):
             COUNTS.update(slide_level_fallback=0, value_error_caught=0)
@@ -89,18 +97,33 @@ def main():
                 list(range(len(slide_ids))), (y == k).astype(int), slide_ids, seed=SEED, **split_args)
             n_fallbacks = COUNTS["slide_level_fallback"] + COUNTS["value_error_caught"]
             total += n_fallbacks
+            # out[0:3] are the slide indices of train / val / cal (bags = slide indices)
+            parts = {"train": {pid[i] for i in out[0]}, "val": {pid[i] for i in out[1]},
+                     "cal": {pid[i] for i in out[2]}, "test": test_pats}
+            names = list(parts)
+            shared = sum(len(parts[a] & parts[b]) for i, a in enumerate(names) for b in names[i + 1:])
+            total_shared += shared
             results.append({
                 "run": run, "classifier": f"{cls} vs rest",
                 "split": "patient-level" if out[6] is not None else "slide-level (fallback)",
+                "patients": {n: len(parts[n]) for n in names},
+                "shared_patients": shared,
                 **COUNTS, "fallbacks_total": n_fallbacks,
             })
 
-    print(f"{'run':42s} {'classifier':16s} {'split':14s} fallbacks")
+    print(f"{'run':44s} {'classifier':14s} {'split':14s} {'train/val/cal/test patients':28s} shared fallbacks")
     for r in results:
-        print(f"{r['run']:42s} {r['classifier']:16s} {r['split']:14s} {r['fallbacks_total']}")
-    print(f"\nTotal fallbacks across {len(results)} classifiers: {total}")
+        n = r["patients"]
+        sizes = f"{n['train']}/{n['val']}/{n['cal']}/{n['test']}"
+        print(f"{r['run']:44s} {r['classifier']:14s} {r['split']:14s} {sizes:28s} "
+              f"{r['shared_patients']:6d} {r['fallbacks_total']:9d}")
+    print(f"\nTrain/test shared patients: {n_train_test_shared}")
+    print(f"Shared patients between any two partitions, all {len(results)} classifiers: {total_shared}")
+    print(f"Fallback calls, all {len(results)} classifiers: {total}")
 
-    json.dump({"total_fallbacks": total, "per_classifier": results}, open(args.output, "w"), indent=2)
+    json.dump({"train_test_shared_patients": n_train_test_shared,
+               "total_shared_patients": total_shared, "total_fallbacks": total,
+               "per_classifier": results}, open(args.output, "w"), indent=2)
 
 
 if __name__ == "__main__":

@@ -26,5 +26,6 @@ cannot be split into stratified train/validation/calibration sets at patient lev
 script reports one `_slide_level_split()` call. In the full dataset every class has well over
 100 patients in the training set.
 
-`run_records/` contains the unedited run summaries written during training, which record
-the split strategy (`patient-level`) for every classifier.
+## Run timestamps
+`run_timestamps.txt` lists when the patient-level split was created and when each reported
+model was trained. All reported models were trained after, and on, this split.

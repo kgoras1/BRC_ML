@@ -1,0 +1,11 @@
+Timestamps of the patient-level split and the reported revision runs
+(file modification times of the output files; all runs used the split below)
+
+Step                                         Output file                                   Timestamp
+-------------------------------------------  --------------------------------------------  ----------------
+Patient-level train/test split               split_report_seed_42.txt / .json              2026-06-06 12:16
+Attention MIL (class-weighted CE)            training_summary.json                         2026-06-06 14:46
+Attention MIL (oversampling)                 training_summary.json                         2026-06-06 16:58
+Tile-level LR                                run.log                                       2026-06-06 20:20
+Slide-level LR (8 imbalance/calibration)     training_summary.json                         2026-06-08 12:07-12:16
+Cosine kNN                                   training.log                                  2026-06-08 11:09

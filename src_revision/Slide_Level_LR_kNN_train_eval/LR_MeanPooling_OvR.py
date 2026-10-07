@@ -6,10 +6,12 @@ One-vs-Rest Logistic Regression on mean-pooled slide-level features.
 
 Strategy (mirrors manuscript description):
 - Slide-level embeddings obtained by mean-pooling tile features from MIL bags.
-- Per-class OvR LR classifiers, hyperparameters tuned via GridSearchCV (5-fold CV)
-  on the 80% training split; balanced accuracy is the scoring metric.
-- Patient-level 80/10/10 train/val/cal split — no patient appears in more than one
-  partition, preventing any form of data leakage.
+- Patient-level 80/20 train/cal split of the training set — no patient appears in
+  more than one partition. The test set comes from the patient-level train/test split
+  in data_split/Datasplit_train_test.py and is not used for training or tuning.
+- Per-class OvR LR classifiers, hyperparameters tuned via GridSearchCV (5-fold
+  label-stratified CV, StratifiedKFold) on the train split; balanced accuracy is the
+  scoring metric.
 - Optional temperature scaling: grid-searches T on the held-out calibration split;
   calibrated probabilities are L1-normalised across classes at inference.
 - Optional class-imbalance strategies (all applied BEFORE CV fitting, on the train
@@ -1568,7 +1570,7 @@ def main():
         if args.imbalance != "none":
             LOGGER.info(f"  After {args.imbalance}: neg={int((y_tr_fit==0).sum())} pos={int((y_tr_fit==1).sum())}")
 
-        # GridSearchCV with patient-stratified CV folds — use StratifiedKFold on the (resampled) train split
+        # GridSearchCV with label-stratified CV folds (StratifiedKFold) on the (resampled) train split
         cv = StratifiedKFold(n_splits=args.cv_folds, shuffle=True, random_state=args.seed)
         clf_base = LogisticRegression(max_iter=2000, random_state=args.seed, n_jobs=1)
         gs = GridSearchCV(

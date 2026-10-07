@@ -7,19 +7,23 @@ Pipeline:
    with [n_tiles, feat_dim] features.
 2. Flatten bags to tiles: every tile inherits its slide's class label (no tile-level
    labels exist; this is weakly-supervised training).
-3. Build patient-level 5-fold CV splits: all tiles from the same patient stay in the
-   same fold to prevent any patient-level data leakage.
-4. For each class k train one binary OvR Logistic Regression inside an imblearn
-   Pipeline with RandomOverSampler.  GridSearchCV tunes C, class_weight, solver.
+3. For each class k, split the training patients 80/20 into fit and calibration sets
+   at patient level: all tiles from the same patient stay in the same set.
+4. Train one binary OvR Logistic Regression inside an imblearn Pipeline with
+   RandomOverSampler, using fixed parameters (C=0.01, class_weight='balanced',
+   solver='lbfgs'). The original version (src/MIL/MIL_training/LR_MIL.py) tuned these
+   by 5-fold CV; this was replaced by fixed parameters because the search over all
+   training tiles was very expensive and scores were nearly identical across C values.
+   Fit temperature T on the calibration set.
 5. Predict on test tiles: each OvR classifier scores tiles → argmax gives the class.
 6. Optional slide-level aggregation: mean-pool tile probabilities per slide.
 
 Key features:
 - NO attention mechanism; pure sklearn LogisticRegression on tile features.
-- Patient-level CV splits (TCGA/CPTAC/Warwick patient ID extraction).
-- Oversampling via imblearn Pipeline applied only inside training folds.
+- Patient-level fit/calibration split (TCGA/CPTAC/Warwick patient ID extraction).
+- Oversampling via imblearn Pipeline applied only to the fit set.
 - Comprehensive metrics: accuracy, balanced accuracy, macro/weighted F1, Cohen's kappa, MCC.
-- ROC and PR curves, confusion matrix, CV stability/overfitting plots, confidence analysis.
+- ROC and PR curves, confusion matrix, confidence analysis.
 
 Usage (MIL PKL — preferred, same split as Attention_based_MIL.py):
   python LR_tile_level.py --seed 42 --mil_pkl path/to/mil_data_seed_42.pkl \\

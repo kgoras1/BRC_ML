@@ -2,6 +2,7 @@
   "train_test_shared_patients": 0,
   "total_shared_patients": 0,
   "total_fallbacks": 0,
+  "n_matching_original": 40,
   "per_classifier": [
     {
       "run": "Attention_MIL_weighted_ce",
@@ -16,7 +17,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 736,
+          "pos": 175,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 82,
+          "pos": 24,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 97,
+          "pos": 37,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "Attention_MIL_weighted_ce",
@@ -31,7 +50,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 116,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 95,
+          "pos": 16,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 102,
+          "pos": 23,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "Attention_MIL_weighted_ce",
@@ -46,7 +83,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 489,
+          "pos": 438,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 51,
+          "pos": 58,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 63,
+          "pos": 52,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "Attention_MIL_weighted_ce",
@@ -61,7 +116,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 755,
+          "pos": 168,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 98,
+          "pos": 22,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 86,
+          "pos": 22,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "Attention_MIL_oversample",
@@ -76,7 +149,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 736,
+          "pos": 175,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 82,
+          "pos": 24,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 97,
+          "pos": 37,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "Attention_MIL_oversample",
@@ -91,7 +182,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 116,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 95,
+          "pos": 16,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 102,
+          "pos": 23,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "Attention_MIL_oversample",
@@ -106,7 +215,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 489,
+          "pos": 438,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 51,
+          "pos": 58,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 63,
+          "pos": 52,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "Attention_MIL_oversample",
@@ -121,7 +248,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 755,
+          "pos": 168,
+          "n_patients": 705
+        },
+        "val": {
+          "neg": 98,
+          "pos": 22,
+          "n_patients": 89
+        },
+        "cal": {
+          "neg": 86,
+          "pos": 22,
+          "n_patients": 89
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_nocal",
@@ -136,7 +281,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_nocal",
@@ -151,7 +314,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_nocal",
@@ -166,7 +347,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_nocal",
@@ -181,7 +380,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_cal",
@@ -196,7 +413,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_cal",
@@ -211,7 +446,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_cal",
@@ -226,7 +479,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_none_cal",
@@ -241,7 +512,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_nocal",
@@ -256,7 +545,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_nocal",
@@ -271,7 +578,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_nocal",
@@ -286,7 +611,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_nocal",
@@ -301,7 +644,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_cal",
@@ -316,7 +677,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_cal",
@@ -331,7 +710,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_cal",
@@ -346,7 +743,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_oversample_cal",
@@ -361,7 +776,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_nocal",
@@ -376,7 +809,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_nocal",
@@ -391,7 +842,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_nocal",
@@ -406,7 +875,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_nocal",
@@ -421,7 +908,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_cal",
@@ -436,7 +941,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_cal",
@@ -451,7 +974,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_cal",
@@ -466,7 +1007,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_undersample_cal",
@@ -481,7 +1040,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_nocal",
@@ -496,7 +1073,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_nocal",
@@ -511,7 +1106,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_nocal",
@@ -526,7 +1139,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_nocal",
@@ -541,7 +1172,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_cal",
@@ -556,7 +1205,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 734,
+          "pos": 196,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 181,
+          "pos": 40,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_cal",
@@ -571,7 +1238,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 799,
+          "pos": 126,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 197,
+          "pos": 29,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_cal",
@@ -586,7 +1271,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 491,
+          "pos": 429,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 112,
+          "pos": 119,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     },
     {
       "run": "LR_mean_pooling/imbalance_smote_cal",
@@ -601,7 +1304,25 @@
       "shared_patients": 0,
       "slide_level_fallback": 0,
       "value_error_caught": 0,
-      "fallbacks_total": 0
+      "fallbacks_total": 0,
+      "replayed_counts": {
+        "train": {
+          "neg": 747,
+          "pos": 171,
+          "n_patients": 706
+        },
+        "val": {
+          "neg": 0,
+          "pos": 0,
+          "n_patients": 0
+        },
+        "cal": {
+          "neg": 192,
+          "pos": 41,
+          "n_patients": 177
+        }
+      },
+      "matches_original": true
     }
   ]
 }

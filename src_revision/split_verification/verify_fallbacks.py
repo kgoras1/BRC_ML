@@ -16,6 +16,10 @@ seed of that run, and the following are checked:
                             validation split, or single-class val/cal subset)
   - value_error_caught   : ValueErrors raised by train_test_split() and caught
                            inside the split function (the except-branches)
+  - matches_original     : replayed split strategy and per-partition negative/positive
+                           slide and patient counts equal those recorded by the original
+                           training run (original_split_records.json, written by
+                           extract_original_split_records.py)
 
 Usage:
   python verify_fallbacks.py --mean_features_pkl path/to/mean_features_train_test_seed_42.pkl
@@ -72,8 +76,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mean_features_pkl", required=True,
                     help="PKL with train_ids / train_labels / class_names of the training set")
+    ap.add_argument("--original_records", default=os.path.join(HERE, "original_split_records.json"))
     ap.add_argument("--output", default=os.path.join(HERE, "verify_fallbacks_output.json"))
     args = ap.parse_args()
+
+    original = {(r["run"], r["classifier"]): r for r in json.load(open(args.original_records))}
 
     instrument(mil)
     instrument(lr)
@@ -89,7 +96,7 @@ def main():
     print(f"Train/test split: {len(train_pats)} train patients, {len(test_pats)} test patients, "
           f"shared = {n_train_test_shared}\n")
 
-    results, total, total_shared = [], 0, 0
+    results, total, total_shared, n_match = [], 0, 0, 0
     for run, (module, split_args) in RUNS.items():
         for k, cls in enumerate(classes):
             COUNTS.update(slide_level_fallback=0, value_error_caught=0)
@@ -103,26 +110,41 @@ def main():
             names = list(parts)
             shared = sum(len(parts[a] & parts[b]) for i, a in enumerate(names) for b in names[i + 1:])
             total_shared += shared
+            split = "patient-level" if out[6] is not None else "slide-level (fallback)"
+            # out[3:6] are the binary labels of train / val / cal, out[6:9] their patient counts
+            replay = {p: {"neg": int((y_p == 0).sum()), "pos": int((y_p == 1).sum()), "n_patients": n_p}
+                      for p, y_p, n_p in zip(("train", "val", "cal"), out[3:6], out[6:9])}
+            orig = original[(run, f"{cls} vs rest")]
+            # LR has no validation partition; the original run records none
+            matches = (split == orig["split_strategy"]
+                       and all(replay[p] == orig[p] for p in ("train", "cal"))
+                       and (replay["val"] == orig["val"] if orig["val"] is not None
+                            else replay["val"]["neg"] + replay["val"]["pos"] == 0))
+            n_match += matches
             results.append({
-                "run": run, "classifier": f"{cls} vs rest",
-                "split": "patient-level" if out[6] is not None else "slide-level (fallback)",
+                "run": run, "classifier": f"{cls} vs rest", "split": split,
                 "patients": {n: len(parts[n]) for n in names},
                 "shared_patients": shared,
                 **COUNTS, "fallbacks_total": n_fallbacks,
+                "replayed_counts": replay, "matches_original": bool(matches),
             })
 
-    print(f"{'run':44s} {'classifier':14s} {'split':14s} {'train/val/cal/test patients':28s} shared fallbacks")
+    print(f"{'run':44s} {'classifier':14s} {'split':14s} {'train/val/cal/test patients':28s} "
+          f"shared fallbacks matches_original")
     for r in results:
         n = r["patients"]
         sizes = f"{n['train']}/{n['val']}/{n['cal']}/{n['test']}"
         print(f"{r['run']:44s} {r['classifier']:14s} {r['split']:14s} {sizes:28s} "
-              f"{r['shared_patients']:6d} {r['fallbacks_total']:9d}")
+              f"{r['shared_patients']:6d} {r['fallbacks_total']:9d} {'yes' if r['matches_original'] else 'NO':>16s}")
     print(f"\nTrain/test shared patients: {n_train_test_shared}")
     print(f"Shared patients between any two partitions, all {len(results)} classifiers: {total_shared}")
     print(f"Fallback calls, all {len(results)} classifiers: {total}")
+    print(f"Replay identical to original training record (split strategy, neg/pos slides and "
+          f"patients per partition): {n_match} of {len(results)} classifiers")
 
     json.dump({"train_test_shared_patients": n_train_test_shared,
                "total_shared_patients": total_shared, "total_fallbacks": total,
+               "n_matching_original": n_match,
                "per_classifier": results}, open(args.output, "w"), indent=2)
 
 

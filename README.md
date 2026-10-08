@@ -123,7 +123,7 @@ The scripts are designed to run on a local filesystem; paths and hyperparameters
 
 Users can consult docstrings in each script for detailed parameter explanations.
 
-In the original version (`src/MIL/MIL_training/LR_MIL.py`), tile-level logistic regression hyperparameters were tuned by 5-fold cross-validation on the training split. Because this search over ~10 million tiles was computationally very expensive, and its scores were nearly identical across C values, the revised version (`src_revision/LR_tile_train_eval/LR_tile_level.py`) uses a fixed regularisation strength (C = 0.01) instead. In both versions the test set was not used for tuning.
+In the original version (`src/MIL/MIL_training/LR_MIL.py`), tile-level logistic regression hyperparameters were tuned by 5-fold cross-validation on the training split. Because this search over ~10 million tiles was computationally very expensive, the revised version (`src_revision/LR_tile_train_eval/LR_tile_level.py`) uses a fixed regularisation strength (C = 0.01) instead. In both versions the test set was not used for tuning.
 
 All core code for feature extraction, model training, and evaluation is fully included for transparency and reuse.
 

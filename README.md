@@ -127,5 +127,6 @@ In the original version (`src/MIL/MIL_training/LR_MIL.py`), tile-level logistic 
 
 All core code for feature extraction, model training, and evaluation is fully included for transparency and reuse.
 
-Researchers are encouraged to adapt the pipeline to their own datasets using the provided modules.
+Researchers are encouraged to adapt the pipeline to their own datasets using the provided modules. The repo src_revision/ represents all the code used for the peer-reviewed revised manuscript and its results.
+
 
